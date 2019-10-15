@@ -77,7 +77,8 @@ static void dns_query_handler(
 
     // Handle error (if any)
     if (err) {
-        DEBUG_WARNING("Could not query DNS record for '%r', reason: %m\n", &resolver->url->host, err);
+        DEBUG_WARNING(
+            "Could not query DNS record for '%r', reason: %m\n", &resolver->url->host, err);
         goto out;
     } else if (header->rcode != 0) {
         DEBUG_NOTICE(
