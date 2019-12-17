@@ -23,6 +23,8 @@ compiler_args = compiler.get_supported_arguments([
     '-Wuninitialized',
     '-Wshorten-64-to-32',
     '-pedantic',
+    '-fstack-protector-all',
+    '-fpie',
 ])
 add_project_arguments(compiler_args, language: 'c')
 
@@ -90,7 +92,7 @@ subdir('include')
 subdir('src')
 
 # Build library
-rawrtc = library(meson.project_name(), sources,
+rawrtc = static_library(meson.project_name(), sources,
     dependencies: dependencies,
     include_directories: include_dir,
     install: true,

@@ -1,0 +1,16 @@
+[binaries]
+c = 'mipsel-linux-gcc'
+cpp = 'mipsel-linux-g++'
+strip = 'mipsel-linux-strip'
+ar = 'mipsel-linux-ar'
+pkgconfig = 'pkg-config'
+
+[properties]
+c_args = ['-I/home/zhongjiannan/project/rawrtc/deps/include']
+c_link_args = ['-L/home/zhongjiannan/project/rawrtc/deps', '-lm']
+
+[host_machine]
+system = 'linux'
+cpu_family = 'mips'
+cpu = 'mips'
+endian = 'little'

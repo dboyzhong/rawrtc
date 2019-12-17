@@ -6,6 +6,10 @@
 
 A WebRTC and ORTC library with a small footprint.
 
+## Build
+- meson build --cross-file cross_build.txt  //build for msdk
+- meson build //build for x64
+
 ## Features
 
 The following list represents all features that are planned for RAWRTC.
